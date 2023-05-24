@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/table.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <title>Static Page</title>
+    <script>
+      function getdata() {
+        const obj = {Name: document.getElementById("text1").value,
+          Email: document.getElementById("text2").value,
+          Password: document.getElementById("pass").value
+        }
+        document.write(obj);
+        const myjson = JSON.stringify(obj);
+        localStorage.setItem("localst", myjson);
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      Name:<input type="text" id="text1" /><br /><br />
+      Email:<input type="text" id="text2" /><br /><br />
+      password:<input type="password" id="pass" /><br /><br />
+      <button type="submit" onclick="getdata()">Submit</button>
+    </form>
+  </body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>Static Page</title>
+    <script>
+      function dis(){
+        let text=localStorage.getItem("myjso");
+        let obj2=JSON.parse(text);
+        document.getElementById("para1").innerHTML="Name: " + obj2.Name;
+        document.getElementById("para2").innerHTML="Email:" + obj2.Email ;
+        document.getElementById("para3").innerHTML="Password: " + obj2.Password ;
+
+      }
+      </script>
+  </head>
+  <body>
+ 
+
+      <p id="para1"></p><br><br>
+      <p id="para2"></p><br><br>
+      <p id="para3"></p><br><br>
+      <button type="submit" onclick="dis()">Submit</button>
+
+    </form>
+  </body>
+</html>

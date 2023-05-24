@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function getdata() {
+        const obj = {
+          Name: document.getElementById("text1").value,
+          Email: document.getElementById("text2").value,
+          Password: document.getElementById("pass").value
+        };
+        const myjson = JSON.stringify(obj);
+        localStorage.setItem("myjso", myjson);
+      }
+    </script>
+  </head>
+  <body>
+    <form action="next.html">
+      Name:<input type="text" id="text1" /><br /><br />
+      Email:<input type="text" id="text2" /><br /><br />
+      password:<input type="password" id="pass" /><br /><br />
+      <button type="submit" onclick="getdata()">Submit</button>
+    </form>
+  </body>
+</html>
+
